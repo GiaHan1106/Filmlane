@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Filmlane</title>
+        <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="header">
+            <div class="container align-item">
+                <a class="logo" href=""> <img src="img/logo.svg" alt="" /></a>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="list-movie.html?type=movie" id="movie">MOVIES</a></li>
+                        <li><a href="list-movie.html?type=tv" id="tvshow">TV SHOWS</a></li>
+                        <li><a href="people.html?page=1">PEOPLE</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search for a movie, tv show" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="icon"><i class="fa-solid fa-bars-staggered"></i></div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container">
+                <h3>Filmlane</h3>
+                <h1>Unlimited <span class="color-text">Movie</span> TVs Shows, & More.</h1>
+                <p>Romance Drama</p>
+                <a class="banner-watch" href=""><i class="fa-solid fa-play"></i> WATCH NOW</a>
+            </div>
+        </div>
+        <div class="listmovie" style="background-image: url(img/nowplaying-bg.png)">
+            <div class="container">
+                <div class="title">
+                    <h3>ONLINE STREAMING</h3>
+                    <h1>Now playing Movies</h1>
+                </div>
+                <div class="list" id="nowplay"></div>
+            </div>
+        </div>
+        <div class="listmovie" style="background-image: url(img/upcoming-bg.jpeg)">
+            <div class="container">
+                <div class="title">
+                    <h3>ONLINE STREAMING</h3>
+                    <h1>Upcoming movie</h1>
+                </div>
+                <div class="list" id="upcoming"></div>
+            </div>
+        </div>
+        <div class="listmovie" style="background-image: url(img/top-rated-bg.jpeg)">
+            <div class="container">
+                <div class="title">
+                    <h3>ONLINE STREAMING</h3>
+                    <h1>Top Rated Movies</h1>
+                </div>
+                <div class="list" id="toprated"></div>
+            </div>
+        </div>
+        <div class="listmovie" style="background-image: url(img/tv-series-bg.jpeg)">
+            <div class="container">
+                <div class="title">
+                    <h3>ONLINE STREAMING</h3>
+                    <h1>World Best TV Series</h1>
+                </div>
+                <div class="list" id="tvseries"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="text align-item">
+                    <div class="top-left">
+                        <h2>TRIAL START FIRST 30 DAYS.</h2>
+                        <p>Enter your email to create or restart your membership.</p>
+                    </div>
+                    <div class="top-right">
+                        <input type="text" placeholder="Enter your email" />
+                        <button>GET STARTED</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-last">
+            <div class="container">
+                <div class="menu align-item">
+                    <img src="img/logo.svg" alt="" />
+                    <ul class="menu-footer align-item">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="list-movie.html?type=movie">MOVIES</a></li>
+                        <li><a href="list-movie.html?type=tvShow">TV SHOWS</a></li>
+                        <li><a href="people.html?page=1">PEOPLE</a></li>
+                    </ul>
+                </div>
+                <div class="body-footer align-item">
+                    <p class="coder">© 2023 <span class="coder-color">Filmlane</span>.All Rights Reserved by <span class="coder-color">Gia Han</span></p>
+                    <div class="social">
+                        <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/style.js"></script>
+    </body>
+</html>

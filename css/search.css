@@ -1,0 +1,29 @@
+.banner {
+    background-image: url(../img/moviebackground.jpeg);
+    height: 50vh;
+    background-size: cover;
+    padding-top: 120px;
+    color: #fff;
+}
+.banner h3 {
+    color: var(--primarycolor);
+    font-size: 14px;
+}
+.banner h1 {
+    color: #fff;
+    font-size: 48px;
+}
+.listSearch {
+    background-image: url(../img/upcoming-bg.png);
+    background-size: cover;
+    padding: 50px;
+}
+.listSearch .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.listSearch .cardmovie {
+    width: calc(20% - 20px);
+}

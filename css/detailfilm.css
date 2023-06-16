@@ -1,0 +1,230 @@
+.banner {
+    background-image: linear-gradient(to top, rgba(17, 29, 29, 0.93), rgba(17, 29, 29, 0.93)), url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/2I5eBh98Q4aPq8WdQrHdTC8ARhY.jpg);
+    height: 100vh;
+    background-size: cover;
+    padding-top: 120px;
+    color: #fff;
+}
+.banner .left-banner {
+    width: 30%;
+}
+.banner .left-banner img {
+    border-radius: 10px;
+    width: 90%;
+}
+.banner .right-banner {
+    width: 70%;
+    margin-left: 20px;
+}
+.banner .right-banner h1 {
+    font-size: 20px;
+}
+.banner .right-banner .yearPro {
+    font-size: 10px;
+    margin: 10px 0;
+}
+.banner .right-banner .yearPro .kind {
+    margin: 0 5px;
+}
+.banner .right-banner .yearPro .time i {
+    color: var(--primarycolor);
+}
+.banner .right-banner .rate {
+    font-size: 12px;
+}
+.banner .right-banner .rate .number-rate {
+    color: var(--primarycolor);
+    border: 2px solid var(--primarycolor);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .right-banner .rate .user {
+    padding: 0 15px 0 10px;
+}
+.banner .right-banner .rate .playtrailer {
+    border: 2px solid #fff;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+.banner .right-banner h3 {
+    font-size: 11px;
+    margin: 10px 0;
+}
+.banner .right-banner h2 {
+    font-size: 15px;
+}
+.banner .right-banner .overview {
+    font-size: 12px;
+}
+.listactors {
+    background-image: url(../img/upcoming-bg.png);
+    height: 100vh;
+    background-size: cover;
+}
+.listactors .title {
+    text-align: center;
+    padding: 30px 0;
+}
+.listactors .title h3 {
+    color: var(--primarycolor);
+    font-size: 15px;
+    font-weight: 300;
+}
+.listactors .title h1 {
+    color: #fff;
+}
+.listactors .thumb-actor {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    color: #fff;
+}
+.listactors .thumb-actor::-webkit-scrollbar {
+    height: 8px;
+}
+.listactors .thumb-actor::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--primary-color);
+    border-radius: 10px;
+}
+.listactors .thumb-actor::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 0 #000, inset 0 -1px 0 #000;
+}
+.listactors .thumb-actor .actor {
+    min-width: 13%;
+}
+.listactors .thumb-actor .actor img {
+    border-radius: 10px;
+}
+.listactors .thumb-actor .actor h1 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+.listactors .thumb-actor .actor .name-actors {
+    font-size: 10px;
+}
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    background-color: #0000008f;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+.popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+.popup .popup-inner {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    background-color: #fff;
+    padding-bottom: 5px;
+    transition: 0.5s;
+}
+.popup.active .popup-inner {
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup .popup-inner .text {
+    display: flex;
+    color: #d25d7e;
+    background-color: #111d1d;
+    border: 1px solid #111d1d;
+    justify-content: space-between;
+    padding: 8px 10px;
+}
+.popup .popup-inner .text h3 {
+    color: var(--primarycolor);
+}
+.popup .popup-inner .text .faX {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--primarycolor);
+    cursor: pointer;
+}
+.popup .popup-inner.active {
+    display: none;
+}
+.review {
+    background-image: url(../img/review-bg.jpeg);
+    gap: 20px;
+}
+.review .title {
+    text-align: center;
+    padding: 30px 0;
+}
+.review .title h3 {
+    color: var(--primarycolor);
+    font-size: 15px;
+    font-weight: 300;
+}
+.review .title h1 {
+    color: #fff;
+}
+.review .reviewer {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+}
+
+.review .reviewer .feedpeople {
+    width: calc(50% - 20px);
+    padding: 20px;
+    display: flex;
+    margin-bottom: 10px;
+    background-color: #ffffff0a;
+    border-radius: 10px;
+}
+.review .reviewer .picture {
+    width: 20%;
+}
+.review .reviewer .picture img {
+    border-radius: 10px;
+}
+.review .reviewer .text-review {
+    width: 80%;
+    color: #fff;
+    margin-left: 30px;
+}
+.review .reviewer .text-review h2 {
+    font-size: 17px;
+}
+.review .reviewer .text-review .date-written {
+    font-size: 12px;
+    margin: 8px 0;
+}
+.review .reviewer .text-review .text-feed {
+    font-size: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.review .reviewer .text-review .text-feed.active {
+    -webkit-line-clamp: unset;
+}
+.review .reviewer .text-review .showmore {
+    font-size: 10px;
+    color: #bababa;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.review .reviewer .text-review .showmore:hover {
+    color: #fff;
+}

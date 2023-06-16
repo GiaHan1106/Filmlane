@@ -1,0 +1,45 @@
+.banner {
+    background-image: url(../img/moviebackground.jpeg);
+    height: 50vh;
+    background-size: cover;
+    padding-top: 120px;
+    color: #fff;
+}
+.banner h3 {
+    color: var(--primarycolor);
+    font-size: 14px;
+}
+.banner h1 {
+    color: #fff;
+    font-size: 48px;
+}
+
+.show .show-more {
+    background-color: var(--primarycolor);
+    color: #fff;
+    border: 2px solid var(--primarycolor);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: flex;
+    width: 11%;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.show .show-more i {
+    margin-right: 10px;
+}
+.show .show-more:hover {
+    background-color: #000;
+}
+.listmovie .list {
+    overflow-x: unset;
+    flex-wrap: wrap;
+}
+.listmovie .list .cardmovie {
+    width: calc(20% - 20px);
+    min-width: unset;
+}
