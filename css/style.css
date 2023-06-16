@@ -348,6 +348,10 @@ body {
     .listmovie .list .cardmovie {
         min-width: 25%;
     }
+    .banner {
+        height: unset;
+        padding-bottom: 40px;
+    }
     .footer .text {
         display: block;
         margin: 0 auto;
@@ -407,7 +411,7 @@ body {
         font-size: 20px;
     }
     .footer-last {
-        padding: 25px 0;
+        padding: 25px 0 10px;
     }
     .footer-last .menu {
         margin-bottom: 5px;
@@ -416,7 +420,7 @@ body {
         display: none;
     }
     .footer-last .menu img {
-        margin: 0 auto;
+        margin: 0 auto 20px;
     }
     .footer-last .body-footer {
         flex-direction: column-reverse;
