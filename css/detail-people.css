@@ -1,0 +1,138 @@
+body {
+    font-family: "Poppins", sans-serif;
+    --primarycolor: #e2d703;
+    --secondarycolor: #111d1d;
+}
+.banner {
+    background-image: url(../img/moviebackground.jpeg);
+    height: 50vh;
+    background-size: cover;
+    padding-top: 120px;
+    color: #fff;
+}
+.list {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+}
+.list .left-people {
+    width: 30%;
+    position: relative;
+    cursor: pointer;
+}
+.list .left-people .infor-people {
+    background-color: #000000a1;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.list .left-people:hover .infor-people {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+.list .left-people .infor-people .social {
+    text-align: center;
+    font-size: 25px;
+}
+.list .left-people .infor-people .social i {
+    margin-right: 10px;
+    border-right: 1px solid #eee;
+    transition: 0.6s;
+}
+.list .left-people .infor-people .social i:hover {
+    color: var(--primarycolor);
+}
+.list .left-people .infor-people .social i:nth-child(1) {
+    padding-right: 17px;
+}
+.list .left-people .infor-people .social i:nth-child(2) {
+    border-right: none;
+}
+.list .left-people .infor-people h1 {
+    font-size: 22px;
+    text-align: center;
+}
+.list .left-people .infor-people .infortext {
+    font-size: 10px;
+    margin-top: 30px;
+    color: #e3e3e3;
+}
+.list .left-people .infor-people .infortext .title {
+    font-size: 12px;
+}
+.list .left-people .infor-people .infortext .title .titletext {
+    font-size: 11px;
+}
+.list .left-people .infor-people .infortext .text {
+    margin-bottom: 12px;
+}
+.list .left-people img {
+    width: 80%;
+    border-radius: 10px;
+}
+.list .right-people {
+    width: 70%;
+}
+.list .right-people h1 {
+    font-size: 30px;
+}
+.list .right-people h1 i {
+    color: var(--primarycolor);
+}
+.list .right-people h3 {
+    margin-top: 20px;
+}
+.list .right-people h2 {
+    margin: 20px 0 8px;
+    font-size: 18px;
+}
+.list .right-people p {
+    font-weight: 100;
+    margin-top: 4px;
+    font-size: 12px;
+}
+.list .right-people .box {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+.list .right-people .box .boxFilm {
+    width: 16%;
+    position: relative;
+}
+.list .right-people .box .boxFilm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    background-color: #ffffff0f;
+    border-radius: 10px;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.list .right-people .box .boxFilm:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+.list .right-people .box .boxFilm img {
+    border-radius: 10px;
+}
+.list .right-people .box .boxFilm h4 {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 10px;
+    color: #bfbfbf;
+}

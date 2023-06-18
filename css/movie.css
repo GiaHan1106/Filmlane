@@ -43,3 +43,172 @@
     width: calc(20% - 20px);
     min-width: unset;
 }
+@media (max-width: 1270px) {
+    .show .show-more i {
+        display: none;
+    }
+    .show .show-more {
+        padding: 15px 34px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 877px) {
+    .show .show-more i {
+        display: none;
+    }
+    .show .show-more {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    .header .icon {
+        display: block;
+        margin-right: 30px;
+    }
+    .header .logo {
+        margin-right: 30px;
+    }
+    .header .menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+    }
+    .header .menu ul li {
+        display: block;
+        background-color: var(--secondarycolor);
+        padding: 10px;
+        margin-bottom: 5px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .header .menu.active ul li {
+        opacity: 1;
+        visibility: visible;
+        animation: menu 0.8s both;
+    }
+    .header .menu.active ul li:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .header .menu.active ul li:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    .header .menu.active ul li:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+    .header .search {
+        margin-left: auto;
+        width: 300px;
+    }
+    .listmovie .list .cardmovie {
+        min-width: 22%;
+    }
+    .banner {
+        height: unset;
+        padding-bottom: 40px;
+    }
+    .footer .text {
+        display: block;
+        margin: 0 auto;
+    }
+    .footer .text .top-left {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .footer .text .top-right {
+        width: 100%;
+    }
+    .footer-last .menu img {
+        width: 100px;
+    }
+}
+@media (max-width: 575px) {
+    .banner {
+        padding-bottom: 5px;
+    }
+    .banner h1 {
+        font-size: 40px;
+    }
+    .listmovie {
+        padding: 20px 0;
+    }
+    .listmovie .list .cardmovie {
+        min-width: 30%;
+    }
+    .cardmovie h3 {
+        font-size: 12px;
+    }
+    .cardmovie .day {
+        font-size: 10px;
+    }
+    .cardmovie .rate {
+        font-size: 10px;
+    }
+    .listmovie .list {
+        padding-bottom: 0;
+    }
+    .listmovie .title {
+        padding: 15px 0 30px;
+    }
+    .footer-last .body-footer .coder {
+        font-size: 10px;
+    }
+    .footer-last .menu ul li a {
+        font-size: 10px;
+    }
+    .show .show-more {
+        padding: 8px 12px;
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 479px) {
+    .header .logo img {
+        width: 100px;
+    }
+    .show .show-more {
+        padding: 5px 1px;
+        font-size: 7px;
+    }
+    .listmovie .list .cardmovie {
+        min-width: 47%;
+    }
+    .listmovie .title h3 {
+        font-size: 12px;
+    }
+    .listmovie .title h1 {
+        font-size: 20px;
+    }
+    .footer-last {
+        padding: 25px 0 10px;
+    }
+    .footer-last .menu {
+        margin-bottom: 5px;
+        align-items: center;
+        font-size: 8px;
+    }
+    .footer-last .menu .menu-footer {
+        display: none;
+    }
+    .footer-last .menu img {
+        margin: 0 auto 20px;
+    }
+    .footer-last .body-footer {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .footer-last .body-footer .social {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 390px) {
+    .listmovie .list .cardmovie {
+        min-width: 46%;
+    }
+}

@@ -345,8 +345,11 @@ body {
         margin-left: auto;
         width: 300px;
     }
+    .listmovie .list {
+        justify-content: center;
+    }
     .listmovie .list .cardmovie {
-        min-width: 25%;
+        min-width: 30%;
     }
     .banner {
         height: unset;
