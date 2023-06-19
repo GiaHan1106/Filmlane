@@ -106,9 +106,11 @@
 .listactors .thumb-actor .actor h1 {
     font-size: 17px;
     margin: 10px 0;
+    color: #fff;
 }
 .listactors .thumb-actor .actor .name-actors {
     font-size: 10px;
+    color: #fff;
 }
 .popup {
     transform: translateX(-50%);

@@ -38,11 +38,11 @@ async function displayActor() {
 
     let actor = document.querySelector(".listactors .thumb-actor");
     dataActor.cast.forEach((element) => {
-        actor.innerHTML += `<div class="actor">
+        actor.innerHTML += `<a href="detail-people.html?id=${element.id}" class="actor">
                                         <img src="https://image.tmdb.org/t/p/w500/${element.profile_path}" alt="" />
                                         <h1>${element.original_name}</h1>
                                         <p class="name-actors">${element.character}</p>
-                                  </div>`;
+                                  </a>`;
     });
 }
 displayActor();

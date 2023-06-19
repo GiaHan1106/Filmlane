@@ -1,6 +1,32 @@
 //khai bao dinh dang API
 const API_KEY = "e9e9d8da18ae29fc430845952232787c";
 const API_LINK = "https://api.themoviedb.org/3/";
+
+//RENDER HEADER
+function renderHeader() {
+    const header = document.querySelector(".header");
+    header.innerHTML = `<div class="container align-item">
+    <a class="logo" href=""> <img src="img/logo.svg" alt="" /></a>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="list-movie.html?type=movie" id="movie">MOVIES</a></li>
+            <li><a href="list-movie.html?type=tv" id="tvshow">TV SHOWS</a></li>
+            <li><a href="people.html?page=1">PEOPLE</a></li>
+            <li>
+                <a href="javascript:;">GENRE</a>
+                <ul class="submenu"></ul>
+            </li>
+        </ul>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search for a movie, tv show" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="icon"><i class="fa-solid fa-bars-staggered"></i></div>
+</div>`;
+}
+renderHeader();
 //XỬ LÝ DOM
 window.addEventListener("scroll", function () {
     var header = document.querySelector(".header");
@@ -42,33 +68,6 @@ async function getData(url) {
     return data;
 }
 
-//List danh sach movie theo tung API Link
-async function startHome() {
-    //NowPlayingMovie
-    const apiLinkPlayingMovie = `${API_LINK}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
-    let listNowPlayingMovie = document.querySelector("#nowplay");
-    let dataPlayingMovie = await getData(apiLinkPlayingMovie);
-    renderListmovie(dataPlayingMovie.results, listNowPlayingMovie);
-    //UpcomingMovie
-    const apilinkUpcoming = `${API_LINK}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1 `;
-    let listUpComingMovie = document.querySelector("#upcoming");
-    let dataUpcomingMovie = await getData(apilinkUpcoming);
-    renderListmovie(dataUpcomingMovie.results, listUpComingMovie);
-    //TopRatedMovie
-    const apiTopRated = ` ${API_LINK}movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
-    let listTopRate = document.querySelector("#toprated");
-    let dataTopRated = await getData(apiTopRated);
-    renderListmovie(dataTopRated.results, listTopRate);
-
-    //tv series
-    const apiTvSeri = ` ${API_LINK}tv/popular?api_key=${API_KEY}&language=en-US&page=1`;
-    let tvSeries = document.querySelector("#tvseries");
-    let dataTvSeri = await getData(apiTvSeri);
-    console.log(dataTvSeri);
-    renderListmovie(dataTvSeri.results, tvSeries);
-}
-startHome();
-
 //search
 let search = document.querySelector(".header .search i ");
 let input = document.querySelector(".header .search input ");
@@ -80,3 +79,14 @@ input.addEventListener("keydown", function (e) {
         window.location.href = `search.html?query=${input.value}`;
     }
 });
+//genre
+let genre = document.querySelector(".header .menu ul li ul");
+async function renderGenre() {
+    let API_GENRE = `${API_LINK}/genre/movie/list?api_key=${API_KEY}`;
+    let promise = await fetch(API_GENRE);
+    let dataGenre = await promise.json();
+    dataGenre.genres.forEach((element) => {
+        genre.innerHTML += `<li><a href="detailGenre.html?genre=${element.name}&id=${element.id}"> ${element.name}</a></li>`;
+    });
+}
+renderGenre();
