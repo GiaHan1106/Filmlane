@@ -1,7 +1,7 @@
 //xu li du lieu
 const url = new URL(window.location.href);
 const type = url.searchParams.get("type");
-const title = document.querySelector(".banner h1");
+const title = document.querySelector(".banner-2 h1");
 title.innerHTML = type == "movie" ? "Movie" : "TV Show";
 let page = 1;
 async function renderList(page) {

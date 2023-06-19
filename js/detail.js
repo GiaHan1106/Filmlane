@@ -5,7 +5,7 @@ const id = url.searchParams.get("id");
 async function renderDetailFilm() {
     const API_DETAIL = `${API_LINK}/movie/${id}?api_key=${API_KEY}`;
     let dataDetail = await getData(API_DETAIL);
-    let banner = document.querySelector(".banner");
+    let banner = document.querySelector(".detail");
     banner.style.backgroundImage = `linear-gradient(to top, rgba(17, 29, 29, 0.93), rgba(17, 29, 29, 0.93)) ,url(https://image.tmdb.org/t/p/w500/${dataDetail.backdrop_path})`;
     banner.innerHTML = ` <div class="container align-item">
                               <div class="left-banner">

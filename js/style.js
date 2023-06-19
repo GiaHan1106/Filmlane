@@ -42,6 +42,11 @@ bar.addEventListener("click", function () {
     menu.classList.toggle("active");
 });
 
+let genreLi = document.querySelector(".header .menu ul li:last-child ");
+let submenu = document.querySelector(".header .menu ul li ul ");
+genreLi.addEventListener("click", function () {
+    submenu.classList.toggle("active");
+});
 //Ham render danh sach movie
 function renderListmovie(dataResult, boxResult) {
     dataResult.forEach((element) => {

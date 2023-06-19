@@ -16,4 +16,4 @@ show.addEventListener("click", async function () {
     await renderListGen(page);
 });
 
-document.querySelector(".banner h1").innerHTML = genreTitle;
+document.querySelector(".banner-2 h1").innerHTML = genreTitle;

@@ -8,10 +8,6 @@ async function renderDetailPeople() {
     detailPeople.innerHTML = ` 
         <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${dataDetailPeople.profile_path}" alt="" />
         <div class="infor-people">
-            <div class="social">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-youtube"></i>
-            </div>
             <h1>Personal Infor</h1>
             <div class="infortext">
                 <div class="text">

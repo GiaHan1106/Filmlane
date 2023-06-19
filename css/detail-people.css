@@ -1,15 +1,3 @@
-body {
-    font-family: "Poppins", sans-serif;
-    --primarycolor: #e2d703;
-    --secondarycolor: #111d1d;
-}
-.banner {
-    background-image: url(../img/moviebackground.jpeg);
-    height: 50vh;
-    background-size: cover;
-    padding-top: 120px;
-    color: #fff;
-}
 .list {
     display: flex;
     background-color: #000;
@@ -157,4 +145,48 @@ body {
 }
 .list .right-people .box .cardmovie {
     min-width: 20%;
+}
+@media (max-width: 991px) {
+    .list {
+        display: block;
+    }
+    .list .left-people {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .list .left-people img {
+        width: 100%;
+    }
+    .list .right-people {
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;
+    }
+    .list .left-people .infor-people {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .list {
+        padding: 10px;
+    }
+    .list .right-people h2 {
+        margin: 25px 0 8px;
+        font-size: 18px;
+    }
+    .list .right-people h1 {
+        font-size: 25px;
+    }
+    .list .right-people .box .cardmovie {
+        min-width: 25%;
+    }
+    .list .right-people {
+        font-size: 14px;
+    }
+    .list .right-people .box .cardmovie h3 {
+        text-align: left;
+    }
+    .list .right-people p {
+        font-size: 10px;
+    }
 }
