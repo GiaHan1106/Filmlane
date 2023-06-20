@@ -478,7 +478,7 @@ body {
         padding: 15px 0;
     }
     .listmovie .list .cardmovie {
-        width: calc(50% - 10px);
+        width: calc(47% - 10px);
     }
     .cardmovie h3 {
         font-size: 14px;
@@ -508,7 +508,7 @@ body {
 @media (max-width: 479px) {
     .banner-2 {
         padding-top: 85px;
-        height: 20vh;
+        height: 22vh;
     }
     .header .logo img {
         width: 100px;
