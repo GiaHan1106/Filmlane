@@ -59,15 +59,15 @@
         min-width: 22%;
     }
     .listPeople .list .actor h1 {
-        font-size: 12px;
+        font-size: 15px;
     }
     .listPeople .list .actor .popularity {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 @media (max-width: 575px) {
     .listPeople {
-        padding: 20px 0;
+        padding: 10px 0;
     }
     .listPeople .list .actor {
         min-width: 30%;
@@ -86,6 +86,9 @@
     }
     .listPeople .title {
         padding: 15px 0 30px;
+    }
+    .list .right-people h3 {
+        margin-top: 0px;
     }
 }
 @media (max-width: 479px) {

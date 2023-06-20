@@ -6,7 +6,7 @@ const API_LINK = "https://api.themoviedb.org/3/";
 function renderHeader() {
     const header = document.querySelector(".header");
     header.innerHTML = `<div class="container align-item">
-    <a class="logo" href=""> <img src="img/logo.svg" alt="" /></a>
+    <a class="logo" href="index.html"> <img src="img/logo.svg" alt="" /></a>
     <div class="menu">
         <ul>
             <li><a href="index.html">HOME</a></li>

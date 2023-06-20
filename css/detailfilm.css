@@ -253,7 +253,7 @@
         margin: 0 auto;
     }
     .detail .right-banner {
-        width: 70%;
+        width: 97%;
         margin: 0 auto;
         text-align: center;
     }
@@ -264,10 +264,10 @@
         justify-content: center;
     }
     .listactors .thumb-actor .actor h1 {
-        font-size: 10px;
+        font-size: 14px;
     }
     .listactors .thumb-actor .actor .name-actors {
-        font-size: 6px;
+        font-size: 12px;
     }
     .review .title h3 {
         font-size: 10px;
@@ -279,21 +279,40 @@
         margin-bottom: 0px;
     }
     .review .reviewer .text-review h2 {
-        font-size: 12px;
+        font-size: 14px;
     }
     .review .reviewer .text-review .date-written {
-        font-size: 9px;
+        font-size: 11px;
     }
     .review .reviewer .text-review .text-feed {
-        font-size: 7px;
+        font-size: 10px;
     }
     .review .reviewer .text-review .showmore {
-        font-size: 8px;
+        font-size: 10px;
     }
 }
 @media (max-width: 575px) {
+    .container {
+        width: 96%;
+        margin-left: 20px;
+    }
     .detail {
         padding-bottom: 5px;
+    }
+    .detail .right-banner h1 {
+        font-size: 23px;
+    }
+    .detail .right-banner .yearPro {
+        font-size: 12px;
+    }
+    .detail .right-banner .rate {
+        font-size: 12px;
+    }
+    .detail .right-banner h3 {
+        font-size: 12px;
+    }
+    .detail .right-banner h2 {
+        padding-top: 2px;
     }
     .detail .left-banner {
         width: 45%;
@@ -303,7 +322,7 @@
     }
     .review .reviewer .feedpeople {
         display: block;
-        padding: 10px;
+        padding: 6px;
         padding-top: 10px;
     }
     .review .reviewer .picture {
@@ -318,6 +337,12 @@
         width: 100%;
         margin-left: 0;
     }
+    .review .title {
+        padding: 15px 0;
+    }
+    .listactors {
+        padding: 10px 0;
+    }
     .listactors .title h3 {
         font-size: 12px;
     }
@@ -325,6 +350,6 @@
         font-size: 23px;
     }
     .listactors .thumb-actor .actor {
-        min-width: 25%;
+        min-width: 30%;
     }
 }
