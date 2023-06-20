@@ -502,7 +502,7 @@ body {
         font-size: 10px;
     }
     .show {
-        height: unset;
+        height: 15vh;
     }
 }
 @media (max-width: 479px) {
