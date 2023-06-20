@@ -232,7 +232,7 @@ body {
 }
 .cardmovie h3 {
     color: #fff;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 .cardmovie .day {
     color: #fff;
@@ -357,6 +357,9 @@ body {
     font-size: 48px;
 }
 @media (max-width: 991px) {
+    .listmovie .list {
+        gap: 27px;
+    }
     .header .menu ul li a {
         margin-right: 25px;
     }
@@ -370,9 +373,12 @@ body {
         width: 100%;
     }
     .banner-2 {
-        padding-top: 100px;
+        padding-top: 80px;
         text-align: center;
-        height: 40vh;
+        height: 18vh;
+    }
+    .show {
+        height: 10vh;
     }
 }
 @media (min-width: 768px) {
