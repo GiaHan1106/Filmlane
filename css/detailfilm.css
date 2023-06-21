@@ -290,6 +290,18 @@
     .review .reviewer .text-review .showmore {
         font-size: 10px;
     }
+    .popup .popup-inner {
+        width: 90%;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.7);
+    }
+    .popup iframe {
+        height: 250px;
+    }
+    .popup.active .popup-inner {
+        transform: translateX(-50%) scale(1);
+    }
 }
 @media (max-width: 575px) {
     .container {
