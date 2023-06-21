@@ -76,6 +76,7 @@ body {
 
 .header .menu ul li ul li {
     margin-bottom: 8px;
+    display: block;
 }
 .header .search {
     width: 26%;
@@ -375,7 +376,7 @@ body {
     .banner-2 {
         padding-top: 80px;
         text-align: center;
-        height: 18vh;
+        height: 40vh;
     }
     .show {
         height: 10vh;
@@ -441,9 +442,7 @@ body {
         visibility: visible;
         top: 0;
     }
-    .listmovie .list {
-        justify-content: center;
-    }
+
     .listmovie .list .cardmovie {
         min-width: 30%;
     }

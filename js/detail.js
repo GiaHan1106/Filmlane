@@ -1,30 +1,32 @@
 const url = new URL(window.location.href);
 const id = url.searchParams.get("id");
+const type = url.searchParams.get("type");
 
 //xu li detail phim
 async function renderDetailFilm() {
-    const API_DETAIL = `${API_LINK}/movie/${id}?api_key=${API_KEY}`;
+    const API_DETAIL = `${API_LINK}/${type}/${id}?api_key=${API_KEY}`;
     let dataDetail = await getData(API_DETAIL);
     let banner = document.querySelector(".detail");
+    let findTralier = await renderTralier();
     banner.style.backgroundImage = `linear-gradient(to top, rgba(17, 29, 29, 0.93), rgba(17, 29, 29, 0.93)) ,url(https://image.tmdb.org/t/p/w500/${dataDetail.backdrop_path})`;
     banner.innerHTML = ` <div class="container align-item">
                               <div class="left-banner">
                                    <img src="https://image.tmdb.org/t/p/w500/${dataDetail.poster_path}" alt="" />
                               </div>
                               <div class="right-banner">
-                                   <h1>${dataDetail.title}</h1>
+                                   <h1>${dataDetail.title ? dataDetail.title : dataDetail.original_name}</h1>
                                    <div class="yearPro align-item">
-                                         <p class="year">${dataDetail.release_date}</p>
+                                         <p class="year">${dataDetail.release_date ? dataDetail.release_date : dataDetail.first_air_date}</p>
                                          <p class="kind">${dataDetail.genres.map((genre) => genre.name).join(",")}</p>
-                                         <p class="time"><i class="fa-regular fa-clock"></i> ${dataDetail.runtime} min</p>
+                                         <p class="time"><i class="fa-regular fa-clock"></i> ${dataDetail.runtime ? dataDetail.runtime : dataDetail.number_of_episodes} min</p>
                                    </div>
                                    <div class="rate align-item">
                                          <p class="number-rate">${dataDetail.vote_average}%</p>
                                          <p class="user">user score</p>
-                                         <p onclick="displayPopup()" class="playtrailer"><i class="fa-solid fa-play"></i> Play trailer</p>
+                                         ${findTralier ? `<p onclick="displayPopup()" class="playtrailer"><i class="fa-solid fa-play"></i> Play trailer</p>` : ""}
                                    </div>
                                    <h3>${dataDetail.tagline}</h3>
-                                   <h2>Overview</h2>
+                                  ${dataDetail.overview ? ` <h2>Overview</h2>` : ""}
                                    <p class="overview">${dataDetail.overview}</p>
                               </div>
                          </div>`;
@@ -33,7 +35,7 @@ renderDetailFilm();
 
 // actor
 async function displayActor() {
-    const API_ACTOR = `${API_LINK}/movie/${id}/credits?api_key=${API_KEY}`;
+    const API_ACTOR = `${API_LINK}/${type}/${id}/credits?api_key=${API_KEY}`;
     let dataActor = await getData(API_ACTOR);
 
     let actor = document.querySelector(".listactors .thumb-actor");
@@ -52,9 +54,18 @@ let traliervideo = document.querySelector(".traliervideo");
 let popup = document.querySelector(".popup");
 let closeX = document.querySelector(".faX ");
 let backgroundBlack = document.querySelector("body ");
-function displayPopup() {
+async function displayPopup() {
     popup.classList.add("active");
-    renderTralier();
+    let findTralier = await renderTralier();
+    traliervideo.innerHTML = ` <iframe
+    width="100%"
+    height="500px"
+    src="https://www.youtube.com/embed/${findTralier.key}?autoplay=1"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+></iframe>`;
 }
 closeX.addEventListener("click", function () {
     popup.classList.remove("active");
@@ -69,25 +80,20 @@ popup.addEventListener("click", function (e) {
 
 //Tralier
 async function renderTralier() {
-    const API_TRALIER = `${API_LINK}/movie/${id}/videos?api_key=${API_KEY} `;
+    const API_TRALIER = `${API_LINK}/${type}/${id}/videos?api_key=${API_KEY} `;
     let dataTralier = await getData(API_TRALIER);
     let findTralier = dataTralier.results.find((element) => element.type === "Trailer");
-    traliervideo.innerHTML = ` <iframe
-    width="100%"
-    height="500px"
-    src="https://www.youtube.com/embed/${findTralier.key}?autoplay=1"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-></iframe>`;
+    return findTralier;
 }
 //review
 async function renderReView() {
-    const API_REVIEW = `${API_LINK}/movie/${id}/reviews?api_key=${API_KEY}`;
+    const API_REVIEW = `${API_LINK}/${type}/${id}/reviews?api_key=${API_KEY}`;
     let dataReview = await getData(API_REVIEW);
-    console.log(dataReview);
+    let listReview = document.querySelector(".review  ");
     let review = document.querySelector(".review .reviewer ");
+    if (dataReview.results == "") {
+        listReview.innerHTML = "";
+    }
     dataReview.results.forEach((rev) => {
         review.innerHTML += `
         <div class="feedpeople"> 
@@ -105,7 +111,6 @@ async function renderReView() {
         </div>
         `;
     });
-    console.log(dataReview);
 }
 renderReView();
 //function showmore

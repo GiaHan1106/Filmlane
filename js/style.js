@@ -49,8 +49,9 @@ genreLi.addEventListener("click", function () {
 });
 //Ham render danh sach movie
 function renderListmovie(dataResult, boxResult) {
+    console.log(dataResult);
     dataResult.forEach((element) => {
-        boxResult.innerHTML += ` <a href="detail.html?id=${element.id}" class="cardmovie">
+        boxResult.innerHTML += ` <a href="detail.html?id=${element.id}&type=${element.original_title ? "movie" : "tv"}" class="cardmovie">
         <div class="thumb">
             <img src=" https://image.tmdb.org/t/p/w300${element.poster_path}" alt="" />
         </div>
